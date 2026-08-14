@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Digital Experience</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- Кастомный курсор -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">SKY_Builds<span>.</span></div>
+    <nav class="nav">
+      <a href="#hero">Главная</a>
+      <a href="#features">Возможности</a>
+      <a href="#about">О нас</a>
+    </nav>
+    <a href="#" class="cta-btn">Связаться</a>
+  </header>
+
+  <!-- Hero Секция -->
+  <section class="hero" id="hero">
+    <div class="hero-content reveal">
+      <h1>Магазин<span class="gradient-text">  китов</span>   </h1>
+      <p>Минималистичные интерфейсы, интерактивные анимации и передовые технологии для продвижения вашего бренда.</p>
+      <div class="hero-buttons">
+        <!-- <a href="#features" class="btn primary">Начать проект</a> -->
+        <a href="#" class="btn primary">Арендовать</a>
+        <a href="#" class="btn primary" id="openKitModalBtn">Купить кит</a>
+
+        
+        <!-- <a href="#about" class="btn secondary">Узнать больше</a> -->
+         <a href="#about" class="btn secondary" id="moreInfoBtn">Узнать больше</a>
+        
+      </div>
+    </div>
+    
+    <div class="hero-visual reveal">
+      <div class="glow-sphere"></div>
+    </div>
+  </section>
+
+  <!-- Секция Возможностей -->
+  <section class="features" id="features">
+    <h2 class="reveal">Наши <span class="gradient-text">Преимущества</span></h2>
+    
+    <div class="grid">
+      <!-- Карточка 1 -->
+      <div class="card reveal">
+        <div class="card-icon">⚡</div>
+        <h3>Быстрый сервис</h3>
+        <p>Продовец отвечает быстро и уверенно.</p>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="card reveal">
+        <div class="card-icon">🎨</div>
+        <h3>Уникальный дизайн</h3>
+        <p>Современные эстетические решения с упором на пользовательский опыт и стеклянные эффекты.</p>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="card reveal">
+        <div class="card-icon">🔒</div>
+        <h3>Безопасность</h3>
+        <p>Надёжная защита данных и соблюдение международных стандартов веб-разработки.</p>
+
+                   
+
+              
+        
+
+
+
+        
+
+
+
+
+
+
+
+        
+        
+
+
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- <div class="modal-overlay" id="contactModal">
+  <div class="modal-card">
+    <button class="modal-close" id="closeModal">&times;</button>
+    
+    <h2>Связаться <span class="gradient-text">с нами</span></h2>
+    <p class="modal-subtitle">Заполните форму, и мы свяжемся с вами по почте.</p>
+
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
+      <div class="input-group">
+        <label for="userName">Ваше имя</label>
+        <input type="text" name="name" id="userName" placeholder="Иван" required>
+      </div>
+
+      <div class="input-group">
+        <label for="userEmail">Ваш Email</label>
+        <input type="email" name="email" id="userEmail" placeholder="example@mail.com" required>
+      </div>
+
+      <div class="input-group">
+        <label for="userMessage">Сообщение</label>
+        <textarea name="message" id="userMessage" rows="3" placeholder="Расскажите о вашем проекте..." required></textarea>
+      </div>
+
+      <button type="submit" class="cta-btn submit-btn">Отправить</button>
+    </form>
+  </div>
+</div> -->
+
+
+<!-- МОДАЛЬНОЕ ОКНО "СВЯЗАТЬСЯ" -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-card">
+    <button class="modal-close" id="closeModal">&times;</button>
+    
+    <h2>Связаться <span class="gradient-text">с нами</span></h2>
+    <p class="modal-subtitle">Напишите в тг <b>@R_gotW</b> и мы свяжемся с вами</p>
+
+    <form id="tgRedirectForm">
+      <div class="input-group">
+        <label for="userName">Ваше имя / Ник</label>
+        <input type="text" id="userName" placeholder="Иван или @username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="userMessage">Сообщение</label>
+        <textarea id="userMessage" rows="3" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
+      </div>
+
+      <button type="submit" class="cta-btn submit-btn">Отправить в Telegram</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- МОДАЛЬНОЕ ОКНО "АРЕНДОВАТЬ ДОМ" -->
+<div class="modal-overlay" id="rentModal">
+  <div class="modal-card rent-card">
+    <button class="modal-close" id="closeRentModal">&times;</button>
+    
+    <h2>Аренда <span class="gradient-text">домов в Minecraft</span></h2>
+    <p class="modal-subtitle">Выберите дом, и забронируйте его прямо через Telegram.</p>
+
+    <!-- Сетка с домами -->
+    <div class="houses-grid">
+      <!-- Дом 1 -->
+      <div class="house-item active" data-house="1-ый этаж (100к / нед)">
+        <div class="house-icon">🏡</div>
+        <div class="house-info">
+          <h4>1-ый этаж</h4>
+          <p>100к / нед.</p>
+        </div>
+      </div>
+
+      <!-- Дом 2 -->
+      <div class="house-item" data-house="2-4 этаж (150к / нед)">
+        <div class="house-icon">🏰</div>
+        <div class="house-info">
+          <h4>2-4 этаж</h4>
+          <p>150к / нед.</p>
+        </div>
+      </div>
+
+      <!-- Дом 3 -->
+      <div class="house-item" data-house="5-ый этаж (вип) (300к / нед)">
+        <div class="house-icon">⛰️</div>
+        <div class="house-info">
+          <h4>5-ый этаж (вип)</h4>
+          <p>300к / нед.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Форма отправки -->
+    <form id="rentTgRedirectForm">
+      <input type="hidden" id="selectedHouseInput" value="Уютный Коттедж (40 изумрудов/нед)">
+
+      <div class="input-group">
+        <label for="mcNick">Ник в Minecraft</label>
+        <input type="text" id="mcNick" placeholder="Steve_Pro" required>
+      </div>
+
+      <div class="input-group">
+        <label for="rentDuration">Срок аренды (в неделях)</label>
+        <input type="number" id="rentDuration" min="1" max="52" value="1" required>
+      </div>
+
+      <button type="submit" class="cta-btn submit-btn">Забронировать в Telegram</button>
+    </form>
+  </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО "О НАС / ПОДРОБНЕЕ" -->
+<div class="modal-overlay" id="aboutModal">
+  <div class="modal-card about-card">
+    <button class="modal-close" id="closeAboutModal">&times;</button>
+    
+    <h2>О нашем <span class="gradient-text">Проекте</span></h2>
+    <p class="modal-subtitle">Всё, что вам нужно знать о нашей экосистеме и возможностях.</p>
+
+    <div class="about-features-list">
+      <div class="about-item">
+        <div class="about-icon">🚀</div>
+        <div>
+          <h4>Передовая инфраструктура</h4>
+          <p>Работает 24/7, отвечает очень быстро и выдаем заказы менее за 3 минуты.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <div class="about-icon">🏰</div>
+        <div>
+          <h4>Хорошие киты</h4>
+          <p>В ниличии Raider-Sponsor.</p>
+        </div>
+      </div>
+
+      <div class="about-item">
+        <div class="about-icon">🤝</div>
+        <div>
+          <h4>поддержка</h4>
+          <p>Оперативная поддержка в Telegram и отзывчивая администрация.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 25px; display: flex; gap: 12px;">
+      <a href="https://t.me/R_gotW" target="_blank" class="cta-btn submit-btn" style="text-align: center; text-decoration: none;">Написать в ТГ</a>
+      <button type="button" class="btn secondary" id="closeAboutBtn" style="width: 100%; border-radius: 50px;">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО "КУПИТЬ КИТ" -->
+<div class="modal-overlay" id="kitModal">
+  <div class="modal-card rent-card">
+    <button class="modal-close" id="closeKitModal">&times;</button>
+    
+    <h2>Покупка <span class="gradient-text">китов</span></h2>
+    <p class="modal-subtitle">Выберите подходящий кит и оформите покупку через Telegram.</p>
+
+    <!-- Сетка с китами -->
+    <div class="houses-grid">
+      <!-- Кит Raider -->
+      <div class="house-item kit-item active" data-kit="Кит Raider (450k)">
+        <div class="house-icon">⚔️</div>
+        <div class="house-info">
+          <h4>Кит "Raider"</h4>
+          <p>1kk игровой валюты</p>
+        </div>
+      </div>
+
+      <!-- Кит Sponsor -->
+      <div class="house-item kit-item" data-kit="Кит Sponsor (3.9kk)">
+        <div class="house-icon">💎</div>
+        <div class="house-info">
+          <h4>Кит "Sponsor"</h4>
+          <p>5kk игровой валюты</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Форма отправки -->
+    <form id="kitTgRedirectForm">
+      <input type="hidden" id="selectedKitInput" value="Кит Raider (450k)">
+
+      <div class="input-group">
+        <label for="kitMcNick">Ник в Minecraft</label>
+        <input type="text" id="kitMcNick" placeholder="Steve_Pro" required>
+      </div>
+
+      <div class="input-group">
+        <label for="kitAmount">Количество китов</label>
+        <input type="number" id="kitAmount" min="1" max="10" value="1" required>
+      </div>
+
+      <button type="submit" class="cta-btn submit-btn">Купить в Telegram</button>
+    </form>
+  </div>
+</div>
+
+  
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>© 2026 SKY_Builds Studio. Все права защищены.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
