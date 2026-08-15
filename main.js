@@ -440,3 +440,27 @@ const text = `🏠 *Заявка на аренду этажа!*\n\n` +
 
 const encodedText = encodeURIComponent(text);
 window.open(`https://t.me/R_gotW?text=${encodedText}`, '_blank');
+
+
+
+
+// Таймер обратного отсчета для акции
+function startPromoTimer() {
+  const timerElement = document.getElementById('promoTimer');
+  if (!timerElement) return;
+
+  let totalSeconds = 5 * 3600 + 42 * 60 + 19; // 5 часов 42 мин 19 сек
+
+  setInterval(() => {
+    if (totalSeconds <= 0) totalSeconds = 24 * 3600;
+    totalSeconds--;
+
+    const h = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+    const m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+    const s = (totalSeconds % 60).toString().padStart(2, '0');
+
+    timerElement.textContent = `${h}:${m}:${s}`;
+  }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', startPromoTimer);
