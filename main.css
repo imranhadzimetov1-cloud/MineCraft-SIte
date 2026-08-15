@@ -784,5 +784,183 @@ body {
 }
 
 
+/* ==========================================
+   АДАПТИВНАЯ ВЕРСИЯ ДЛЯ ТЕЛЕФОНОВ И ПЛАНШЕТОВ
+   ========================================== */
+
+/* Планшеты и маленькие экраны (до 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .hero {
+        padding: 120px 5% 60px 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        height: 250px;
+    }
+
+    .glow-sphere {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Мобильные телефоны (до 768px) */
+@media (max-width: 768px) {
+    /* Скрываем кастомный курсор на сенсорных экранах */
+    .cursor, .cursor-follower {
+        display: none !important;
+    }
+
+    * {
+        cursor: auto !important;
+    }
+
+    /* Шапка */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 4%;
+        position: relative; /* Или sticky для удобной навигации */
+    }
+
+    .nav {
+        gap: 20px;
+        font-size: 0.95rem;
+    }
+
+    .header .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Главный блок */
+    .hero {
+        min-height: auto;
+        padding-top: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Сетка карточек */
+    .features {
+        padding: 60px 5%;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    /* Модальные окна (Связаться, Аренда, Киты, О нас) */
+    .modal-overlay {
+        padding: 15px;
+        align-items: flex-end; /* Окно выдвигается удобнее снизу на телефоне */
+    }
+
+    .modal-card, 
+    .rent-card, 
+    .about-card {
+        max-width: 100% !important;
+        padding: 25px 20px;
+        border-radius: 20px 20px 20px 20px;
+        max-height: 85vh;
+        overflow-y: auto; /* Прокрутка, если контент не влезает по высоте */
+    }
+
+    .modal-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .houses-grid {
+        gap: 10px;
+    }
+
+    .house-item {
+        padding: 10px 12px;
+    }
+
+    .house-icon {
+        font-size: 1.5rem;
+    }
+
+    .house-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .house-info p {
+        font-size: 0.8rem;
+    }
+
+    .input-group input, 
+    .input-group textarea {
+        font-size: 16px; /* Предотвращает авто-зум на iPhone при фокусе */
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Совсем маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+    }
+}
+
 
 
