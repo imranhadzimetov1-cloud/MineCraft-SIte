@@ -1039,5 +1039,40 @@ body {
     font-size: 0.9rem;
 }
 
+.promo-section {
+    padding: 30px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.promo-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.timer-box {
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #a855f7;
+    margin: 15px 0 20px 0;
+}
+
 
 
