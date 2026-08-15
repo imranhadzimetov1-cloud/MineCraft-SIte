@@ -418,3 +418,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+// Внутри обработки отправки формы аренды:
+const house = selectedInput.value;
+const nick = document.getElementById('mcNick').value.trim();
+const duration = parseInt(document.getElementById('rentDuration').value) || 1;
+
+// Определяем цену в зависимости от этажа
+let pricePerWeek = 100;
+if (house.includes('2-4')) pricePerWeek = 150;
+if (house.includes('5-ый')) pricePerWeek = 300;
+
+const totalPrice = pricePerWeek * duration;
+
+const text = `🏠 *Заявка на аренду этажа!*\n\n` +
+             `▪ *Вариант:* ${house}\n` +
+             `▪ *Ник:* ${nick}\n` +
+             `▪ *Срок:* ${duration} нед.\n` +
+             `▪ *Итого к оплате:* ~${totalPrice}к`;
+
+const encodedText = encodeURIComponent(text);
+window.open(`https://t.me/R_gotW?text=${encodedText}`, '_blank');
